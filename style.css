@@ -8,7 +8,7 @@ blockquote {
   margin: 0px;
 }
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   border-radius: 5px;
 }
@@ -168,6 +168,14 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
+  .imagens {
+    overflow-x: auto;
+  }
+}
 .col-wide {
   grid-column: 1 /-1;
 }
@@ -282,6 +290,7 @@ p {
   align-content: start;
   padding: 30px;
   gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 /* footer */
 .footer {
@@ -292,4 +301,32 @@ p {
   color: white;
   text-align: center;
   padding: 30px;
+}
+.sobre {
+  padding: 30px;
+}
+.sobre > div {
+  margin-bottom: 30px;
+}
+.texto {
+  border-top: 4px solid #b07dfd;
+  padding-top: 20px;
+  background: #b07dfd;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 1.25em;
+  font-weight: 700;
+  font-style: italic;
+  color: #8844ee;
+}
+
+.imagens {
+  display: flex;
+  margin-top: 30px;
+  gap: 14px;
+}
+.imagem {
+  display: flex;
+  margin-top: 30px;
+  gap: 14px;
 }
